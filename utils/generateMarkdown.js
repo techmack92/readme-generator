@@ -2,22 +2,20 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if(license === "MIT") {
-    return `![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)`;
+    return `[![GitHub license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
   }
 
   if(license === "Boost 1.0") {
-    return `![GitHub license](https://img.shields.io/badge/License-Boost_1.0-orange.svg)](https://www.boost.org/LICENSE_1_0.txt)`;
+    return `[![GitHub license](https://img.shields.io/badge/License-Boost_1.0-orange.svg)](https://www.boost.org/LICENSE_1_0.txt)`;
   }
   
   if(license === "Eclipse 1.0") {
-    return `![GitHub license](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`;
+    return `[![GitHub license](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`;
   }
   
   if(license === "Mozilla 2.0") {
-    return `![GitHub license](https://img.shields.io/badge/License-MPL_2.0-blue.svg)](https://opensource.org/licenses/MPL-2.0)`;
-  }
-  
-  else {
+    return `[![GitHub license](https://img.shields.io/badge/License-MPL_2.0-blue.svg)](https://opensource.org/licenses/MPL-2.0)`;
+  } else {
     return "";
   }
 }
@@ -27,15 +25,15 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   let licenseBadge = renderLicenseBadge(license);
-  let licenseText = '';
+  let licenseText = "";
 
-  if (license === 'none') {
-    licenseText = 'N/A';
+  if (license === "none") {
+    licenseText = "N/A";
   } else {
-    licenseText = `Licensed under the ${license} license. Click the license button for more information.`;
+    licenseText = `### Licensed under the ${license} license.<br> Click the license button for more information.`;
   }
 
-  return `## License<br>${licenseBadge}<br>${licenseText}`;
+  return `## License<br>${licenseText} <br> ${licenseBadge}`;
 }
 
 
@@ -70,9 +68,9 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions
-  If you have any questions about this project, use the contact methods below.
-  GitHub: https://github.com/${data.username}
-  Email: ${data.email}
+  If you have any questions about this project, use the contact methods below.<br>
+  **[GitHub](https://github.com/${data.username})** <br>
+  **[Email](mailto:${data.email})**
 
   ## Credits
   ${data.name}

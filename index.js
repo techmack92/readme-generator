@@ -51,8 +51,8 @@ const questions = [
 
     {
         type: "input",
-        name: "test",
-        message: "Provide detailed instructions of required tests, if applicable: "
+        name: "tests",
+        message: "Provide detailed instructions on how to run the tests you have for this project, if applicable: "
     },
 
     {
