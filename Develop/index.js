@@ -8,6 +8,12 @@ const path = require("path");
 const questions = [
     {
         type: "input",
+        name: "name",
+        message: "What is your first & last name?"
+    },
+
+    {
+        type: "input",
         name: "title",
         message: "What is the name of this project?"
     },
@@ -22,7 +28,7 @@ const questions = [
         type: "checkbox",
         name: "license",
         message: "Select the appropriate license for this project: ",
-        choices: ["MIT", "BSD 2", "Eclipse 2.0", "Mozilla 2.0", "none"]
+        choices: ["MIT", "Boost 1.0", "Eclipse 2.0", "Mozilla 2.0", "none"]
     },
 
     {
