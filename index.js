@@ -25,7 +25,7 @@ const questions = [
     },
 
     {
-        type: "checkbox",
+        type: "list",
         name: "license",
         message: "Select the appropriate license for this project: ",
         choices: ["MIT", "Boost 1.0", "Eclipse 2.0", "Mozilla 2.0", "N/A"]
@@ -77,7 +77,8 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((responses) => {
-        console.log("Your professional README.md file is being generated; you can find it in the 'dist' folder!");
+        console.log("Your professional README.md file has been generated; you can find it in the 'dist' folder!");
+        console.log("Data Object:", responses);
         writeToFile("./dist/README.md", generateMarkdown({...responses}));
     });
 }

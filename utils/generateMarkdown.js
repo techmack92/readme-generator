@@ -1,6 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  console.log("license:", license);
   if (license === "N/A") {
     return "";
   } else {
@@ -12,19 +13,27 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === "MIT") {
-    return `https://opensource.org/licenses/MIT`;
+    const link = `https://opensource.org/licenses/MIT`;
+    console.log("License Link:", link);
+    return link
   }
   
   if (license === "Boost 1.0") {
-    return `https://www.boost.org/LICENSE_1_0.txt`;
+    const link = `https://www.boost.org/LICENSE_1_0.txt`;
+    console.log("License Link:", link);
+    return link
   }
   
   if (license === "Eclipse 1.0") {
-    return `https://opensource.org/licenses/EPL-1.0`;
+    const link = `https://opensource.org/licenses/EPL-1.0`;
+    console.log("License Link:", link);
+    return link
   }
   
   if (license === "Mozilla 2.0") {
-    return `https://opensource.org/licenses/MPL-2.0`;
+    const link = `https://opensource.org/licenses/MPL-2.0`;
+    console.log("License Link:", link);
+    return link
   } else {
     return "";
   }
@@ -36,9 +45,7 @@ function renderLicenseSection(license) {
   if (license === "N/A") {
     return "N/A";
   } else {
-    return `## License 
-    Licensed under the ${license} license.
-    Click the license button for more information.`;
+    return `## License\n\nLicensed under the ${license} license.\nClick the license button above for more information.`;
   }
 }
 
@@ -47,6 +54,7 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
   ${renderLicenseBadge(data.license)}
+  ${renderLicenseSection(data.license)}
 
   ## Table of Contents
   + [License](#license)
@@ -71,9 +79,6 @@ function generateMarkdown(data) {
 
   ## Tests
   ${data.tests}
-
-  ${renderLicenseSection(data.license)}
-
 
   ## Questions
   If you have any questions about this project, use the contact methods below.<br>
