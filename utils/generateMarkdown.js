@@ -1,11 +1,14 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+// *NOTE:* `encodeURIComponent` in the return statement is used to encode special characters in a URL. 
+// (...cont'd) In this case, it is "removing" the space in the URL where the `license` variable is located (bc the variable's value includes a space)
+// (...cont'd) Ex: license = "Boost 1.0". encodeURIComponent inserts "%20" where the space is so the link can render correctly.
 function renderLicenseBadge(license) {
   console.log("license:", license);
   if (license === "N/A") {
     return "";
   } else {
-    return `[![GitHub license](https://img.shields.io/badge/license-${license}-brightgreen.svg)](${renderLicenseLink(license)})`
+    return `[![GitHub license](https://img.shields.io/badge/license-${encodeURIComponent(license)}-brightgreen.svg)](${renderLicenseLink(license)})`
   }
 }
 
