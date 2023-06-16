@@ -32,6 +32,11 @@ Click the license button above for more information.
   ## Usage
   When the user has the required software & Node packages installed, begin the application by using command: `node index.js`<br> Answer the prompts that display on the screen using descriptive details of your project<br> Once all questions are answered, your professional README.md file will generate in the `dist` folder.
 
+  ## Demo
+
+  The following link will route you to the demonstration that shows the web application's functionality:<br>
+  [Demo Video](https://drive.google.com/file/d/15uo84-oJw9efqtRwpAkI_C7x-HPiTJMs/view?usp=sharing)
+
   ## Contributing
   N/A
 
